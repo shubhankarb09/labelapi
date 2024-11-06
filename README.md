@@ -12,19 +12,22 @@ The microservice has been hosted using Azure Container Instances and can be acce
 pip install -r requirements.txt
 
 ## Structure
-labelapi/ <br>
-├── microservice/ <br>  
-│   ├── main.py      <br>        
-│   ├── model.py     <br>         
-├── tests/ <br>
-│   ├── test_main.py <br>          
-│   ├── test_model.py   <br>      
-│   └── __init__.py <br>
-├── requirements.txt <br>
-├── .gitignore <br>
-├── .dockerignore <br>
-├── README.md <br>
-└── Dockerfile <br>
+labelapi/
+│
+├── microservice/
+│   ├── main.py
+│   └── model.py
+│
+├── tests/
+│   ├── test_main.py
+│   ├── test_model.py
+│   └── __init__.py
+│
+├── requirements.txt
+├── .gitignore
+├── .dockerignore
+├── README.md
+└── Dockerfile
 
 <br>
 main.py: contains the code for the FastAPI microservice and includes validation of the received text input.
