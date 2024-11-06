@@ -1,4 +1,3 @@
-import numpy as np
 import random
 
 #Generates dummy probabilities
@@ -25,12 +24,13 @@ def probability_generator(text:str):
     "Cryptocurrency", "Robotics", "Virtual Reality", "Augmented Reality"]
     #Since business requirement is to have minimum of 20 topics
     label_count = random.randrange(20, len(labels))
-    print(label_count)
+    # print(label_count)
     labels_rand = random.sample(labels, label_count)
 
 
     list_probabilities = {topic: random.uniform(0,1) for topic in labels_rand}
     total = sum(list_probabilities.values())
 
+    #Returning normalized values of probabilities
     return {k: v/total for k, v in list_probabilities.items()}
    

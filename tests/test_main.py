@@ -13,12 +13,12 @@ def test_valid_topic():
 
 def test_non_string_input():
     response = test_client.post("/predict-topic", json={"caption_text": 1234})
-    assert response.status_code == 422  # Expect a validation error
+    assert response.status_code == 422  # Expects a validation error
     assert response.json()["detail"][0]["msg"] == "caption_text must be a string."
 
 def test_empty_string():
     response = test_client.post("/predict-topic", json={"caption_text": ""})
-    assert response.status_code == 422  # Expect a validation error
+    assert response.status_code == 422  # Expects a validation error
     assert response.json()["detail"][0]["msg"] == "caption cannot be empty"
 
 

@@ -1,10 +1,10 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from pydantic import BaseModel, Field, validator
 from model import probability_generator
 
 app = FastAPI()
 
-#Input schema
+#Request model
 class PostRequest(BaseModel):
     caption_text: str = Field(..., min_length=1, description="Caption must be a non-empty string.")
 
@@ -17,9 +17,11 @@ class PostRequest(BaseModel):
             raise ValueError("caption_text must be a string.")
         return value
 
+#Response model
 class PostResponse(BaseModel):
     topic_probabilities: dict
 
+#Endpoint calling the dummy function and returning the output as a response
 @app.post("/predict-topic", response_model=PostResponse)
 async def predict_topic(request: PostRequest):
     
