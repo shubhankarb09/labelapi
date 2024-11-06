@@ -13,21 +13,21 @@ pip install -r requirements.txt
 
 ## Structure
 labelapi/
-│
-├── microservice/
-│   ├── main.py
-│   └── model.py
-│
-├── tests/
-│   ├── test_main.py
-│   ├── test_model.py
-│   └── __init__.py
-│
-├── requirements.txt
-├── .gitignore
-├── .dockerignore
-├── README.md
-└── Dockerfile
+
+    microservice/
+        main.py
+        model.py
+
+    tests/
+        test_main.py
+        test_model.py
+        __init__.py
+
+    requirements.txt
+    .gitignore
+    .dockerignore
+    README.md
+    Dockerfile
 
 <br>
 main.py: contains the code for the FastAPI microservice and includes validation of the received text input.
