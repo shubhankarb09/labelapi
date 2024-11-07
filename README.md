@@ -2,13 +2,14 @@
 A FastAPI-based microservice that receives Instagram caption and returns the labels and their corresponding probabilities. The microservice calls a dummy model which
 returns the labels and probabilities. 
 
-## Accessing the microservice for testing purposes
+## Accessing the microservice
 The microservice has been hosted using Azure Container Instances and can be accessed at: http://instagramlabel.dteufrare2fvaqa4.germanywestcentral.azurecontainer.io/docs
+
+Its functionality can be checked by following the link and clicking on the dropdown "POST /predict-topic" and then on "Try it out". The request body can be changed and executed.
 
 ## Setup
 1. Clone the repository.
 2. Install dependencies:
-'''bash
 pip install -r requirements.txt
 
 ## Structure
@@ -53,3 +54,7 @@ test_model.py: contains tests testing the values and types of the outputs.
 
 ## Deployment
 The microservice was containerized using Docker, pushed to DockerHub and hosted using Azure Cloud Instances. 
+
+## Testing
+Test suite can be run by executing the following bash command in the root directory: pytest tests/
+
