@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel, Field, validator
-from model import probability_generator
+from microservice.model import probability_generator
 
 app = FastAPI()
 
